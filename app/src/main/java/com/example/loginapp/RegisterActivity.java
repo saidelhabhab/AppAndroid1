@@ -28,13 +28,15 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.buttonregister);
         gotologin = findViewById(R.id.gotoemail);
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+            btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String username = edituser.getText().toString();
                 String email = editemail.getText().toString();
                 String password = editpassword.getText().toString();
                 String config_password = editconfirm_password.getText().toString();
+
+                Database db = new Database(getApplicationContext(),"firstAppMobile",null,1); // instituation db
 
                 if(username.length()==0 || email.length()==0 || password.length()==0 || config_password.length()==0){
 
@@ -43,9 +45,13 @@ public class RegisterActivity extends AppCompatActivity {
                     if(password.compareTo(config_password) == 0){
 
                         if(isValid(password)){
+                            db.register(username,email,password); // create new user
+                            Toast.makeText(getApplicationContext(),"Record Inserted",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
 
                         }else{
                             Toast.makeText(getApplicationContext(),"password must contain at least 8 characters, havinn letter, digital and number",Toast.LENGTH_SHORT).show();
+
                         }
 
                     }else{
