@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                       SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                       SharedPreferences.Editor editor = sharedPreferences.edit();
                       editor.putString("username",username);
-
+                      // to save our data with key and value
                       editor.apply();
 
 
