@@ -31,9 +31,11 @@ public class ListViewActivity extends AppCompatActivity {
 
         ArrayList<TransactionClass> listTrans =  new ArrayList<TransactionClass>();
 
-        listTrans.add(new TransactionClass(R.drawable.chat,"hello friends"));
-        listTrans.add(new TransactionClass(R.drawable.info,"hello "));
-        listTrans.add(new TransactionClass(R.drawable.dietician,"nicer"));
+        listTrans.add(new TransactionClass(R.drawable.chat,"first one"));
+        listTrans.add(new TransactionClass(R.drawable.info,"second one "));
+        listTrans.add(new TransactionClass(R.drawable.dietician,"third one"));
+        listTrans.add(new TransactionClass(R.drawable.family_physicians,"fourth one"));
+
 
         TransactionAdapter adapter = new TransactionAdapter(this,R.layout.activity_transaction,listTrans);
 

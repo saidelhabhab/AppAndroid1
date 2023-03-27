@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back2"
-    tools:context=".MainActivity"
-
->
+    tools:context=".FindDoctorActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titleHome"
+        android:id="@+id/titleFindDoctor"
         android:text="Happy"
         android:textColor="@color/yellow"
         android:textSize="30sp"
@@ -21,16 +19,27 @@
         android:layout_margin="12dp"
         />
 
+    <TextView
+        android:id="@+id/titleFindDoctorTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleFindDoctor"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:text="HappyTop"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titleHome"
-        android:layout_margin="20dp"
+        android:layout_below="@id/titleFindDoctorTop"
+        android:layout_margin="12dp"
         android:columnCount="2"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardLabTest"
+            android:id="@+id/cardFDFamlily"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -38,11 +47,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,13 +58,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home"/>
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/family_physicians"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lab TEST"
+                    android:text="Family chemies"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -66,7 +74,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardBuyMedical"
+            android:id="@+id/cardFDDeithien"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -74,11 +82,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,13 +93,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/language"/>
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/dietician"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Buy Medicale"
+                    android:text="Dietician"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -101,9 +108,8 @@
 
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardFindDoctor"
+            android:id="@+id/cardFDDentist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -111,11 +117,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -123,13 +128,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/chat"/>
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/dentist"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Find Doctor"
+                    android:text="Dentist"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -138,9 +143,8 @@
 
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardhealtDoctor"
+            android:id="@+id/cardFDSergior"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -148,11 +152,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,13 +163,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/calendar"/>
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/surgeon"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Health"
+                    android:text="Surgeon"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -176,7 +179,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardOrderDetais"
+            android:id="@+id/cardFDCardio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -184,11 +187,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -196,13 +198,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/widgets"/>
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/cardiologists"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Oeder Detais"
+                    android:text="Cardiologists"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -211,8 +213,9 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardExit"
+            android:id="@+id/cardFDBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -220,11 +223,10 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardBackgroundColor="@color/teal_200"
+            app:cardBackgroundColor="@color/purple_Dark"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
             app:cardUseCompatPadding="true">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -232,13 +234,13 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/info"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LogOut"
+                    android:text="back"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -246,9 +248,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
-
 
     </GridLayout>
 
